@@ -1,0 +1,11 @@
+{
+  "name": "OpenGuitar",
+  "short_name": "OpenGuitar",
+  "description": "Private, local guitar practice with Guitary.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#111817",
+  "theme_color": "#111817",
+  "icons": [{ "src": "/favicon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }]
+}

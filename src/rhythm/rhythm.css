@@ -1,0 +1,239 @@
+.rhythm-tools {
+  display: grid;
+  gap: 24px;
+}
+.rhythm-card {
+  border: 1px solid #303d35;
+  border-radius: 20px;
+  background: #19221e;
+  padding: 28px;
+}
+.rhythm-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.rhythm-card h2 {
+  font-size: 1.6rem;
+  letter-spacing: -0.04em;
+  margin: 12px 0;
+}
+.rhythm-card p {
+  font-size: 0.86rem;
+  line-height: 1.7;
+  color: #a6b2aa;
+}
+.rhythm-bpm {
+  font-size: 3rem;
+  color: #f4b66a;
+  font-variant-numeric: tabular-nums;
+}
+.rhythm-bpm small {
+  font-size: 0.64rem;
+  display: block;
+  text-align: right;
+  letter-spacing: 0.16em;
+  color: #9aaa9e;
+}
+.rhythm-controls {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  flex-wrap: wrap;
+  margin: 24px 0;
+}
+.rhythm-card label {
+  font-size: 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #bac7bd;
+}
+.rhythm-card select {
+  border: 1px solid #475448;
+  border-radius: 7px;
+  background: #202b24;
+  color: #d6e1d8;
+  padding: 8px;
+}
+.rhythm-card input {
+  accent-color: #eeb679;
+}
+.beat-lights {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  padding: 30px 0;
+}
+.beat-lights span {
+  width: 50px;
+  height: 50px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  border: 1px solid #465448;
+  color: #a6b2aa;
+}
+.beat-lights .active {
+  background: #eeb679;
+  color: #17231a;
+  border-color: #eeb679;
+  box-shadow: 0 0 32px #eeb67922;
+}
+.rhythm-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  margin: 20px 0;
+}
+.rhythm-tap {
+  padding: 14px 24px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid #eeb679;
+  border-radius: 10px;
+  background: #352e21;
+  color: #f4c990;
+  cursor: pointer;
+}
+.rhythm-card button:disabled {
+  opacity: 0.4;
+  cursor: default;
+}
+.rhythm-feedback {
+  text-align: center;
+  min-height: 25px;
+}
+.timing-track {
+  height: 46px;
+  position: relative;
+  border: 1px solid #34443a;
+  border-radius: 10px;
+  background: linear-gradient(
+    90deg,
+    transparent 35%,
+    #91c9aa11 35%,
+    #91c9aa11 65%,
+    transparent 65%
+  );
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 12px;
+  color: #8d9e91;
+  font-size: 0.6rem;
+  letter-spacing: 0.12em;
+}
+.timing-center {
+  position: absolute;
+  width: 1px;
+  height: 100%;
+  left: 50%;
+  background: #91c9aa66;
+}
+.timing-track i {
+  position: absolute;
+  width: 5px;
+  height: 17px;
+  border-radius: 3px;
+  background: #eeb679;
+}
+.tab-viewport {
+  height: 200px;
+  position: relative;
+  overflow: hidden;
+  margin: 25px 0;
+  border-radius: 12px;
+  background: #131d17;
+}
+.tab-playhead {
+  position: absolute;
+  left: 100px;
+  top: 0;
+  height: 100%;
+  width: 2px;
+  background: #f4b66a;
+  box-shadow: 0 0 12px #f4b66a44;
+  z-index: 2;
+}
+.timed-string {
+  position: absolute;
+  left: 0;
+  right: 0;
+  border-top: 1px solid #70837555;
+}
+.timed-string > span {
+  position: absolute;
+  top: -9px;
+  left: 15px;
+  background: #131d17;
+  padding: 0 6px;
+  color: #9bab9d;
+  font-size: 0.75rem;
+}
+.timed-fret {
+  position: absolute;
+  width: 27px;
+  height: 26px;
+  background: #344339;
+  color: #e5eee7;
+  border: 1px solid #748277;
+  border-radius: 6px;
+  display: grid;
+  place-items: center;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+.timed-fret.hit,
+.timed-note-list .hit {
+  background: #1e4631;
+  color: #a4dfb9;
+  border-color: #6fbc8b;
+}
+.timed-fret.missed,
+.timed-note-list .missed {
+  opacity: 0.45;
+}
+.timed-fret.wrong,
+.timed-note-list .wrong {
+  background: #583429;
+  color: #f2b19b;
+}
+.timed-note-list {
+  display: flex;
+  gap: 9px;
+  flex-wrap: wrap;
+}
+.timed-note-list span {
+  font-size: 0.7rem;
+  border: 1px solid #405247;
+  border-radius: 6px;
+  padding: 5px 9px;
+  color: #b9c9be;
+}
+@media (max-width: 600px) {
+  .rhythm-card {
+    padding: 22px;
+  }
+  .beat-lights {
+    gap: 10px;
+  }
+  .beat-lights span {
+    width: 37px;
+    height: 37px;
+  }
+  .rhythm-controls {
+    gap: 18px;
+  }
+  .rhythm-controls label:first-child {
+    width: 100%;
+  }
+  .rhythm-controls input {
+    flex: 1;
+  }
+  .rhythm-bpm {
+    font-size: 2.5rem;
+  }
+}

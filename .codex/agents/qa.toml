@@ -1,0 +1,7 @@
+name = "qa"
+description = "Focused regression tests, browser verification, synthetic benchmarks and bug reproduction."
+model = "gpt-6-luna"
+model_reasoning_effort = "medium"
+developer_instructions = """
+Follow AGENTS.md. Prefer deterministic checks. Test externally observable behavior and failure cases. Do not make implementation changes outside assigned ownership. Report exact commands, actual results, reproduction steps and unverified areas.
+"""

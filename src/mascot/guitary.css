@@ -1,0 +1,108 @@
+.guitary {
+  display: block;
+  width: 100%;
+  max-width: 240px;
+  overflow: visible;
+  --guitary-sway: 2deg;
+}
+.guitary--full {
+  --guitary-sway: 5deg;
+}
+.guitary-character {
+  transform-origin: 120px 242px;
+  animation: guitary-breathe 4s ease-in-out infinite;
+}
+.guitary-left-arm {
+  transform-origin: 72px 171px;
+}
+.guitary-right-arm {
+  transform-origin: 167px 171px;
+}
+.guitary-sparkles {
+  opacity: 0;
+}
+.guitary--greeting .guitary-right-arm {
+  animation: guitary-wave 1.3s ease-in-out 3;
+}
+.guitary--explaining .guitary-left-arm {
+  animation: guitary-gesture 2.5s ease-in-out infinite;
+}
+.guitary--listening .guitary-character {
+  animation: guitary-listen 3s ease-in-out infinite;
+}
+.guitary--thinking .guitary-character,
+.guitary--confused .guitary-character {
+  animation: guitary-think 3.5s ease-in-out infinite;
+}
+.guitary--correcting .guitary-right-arm {
+  animation: guitary-gesture 2.8s ease-in-out infinite;
+}
+.guitary--encouraging .guitary-character {
+  animation: guitary-nod 1.5s ease-in-out 2;
+}
+.guitary--celebrating .guitary-character {
+  animation: guitary-hop 0.9s ease-in-out 3;
+}
+.guitary--celebrating .guitary-sparkles {
+  animation: guitary-sparkle 1.2s ease-in-out 3;
+}
+.guitary--waiting .guitary-character {
+  animation: guitary-breathe 5s ease-in-out infinite;
+}
+.guitary--sleeping .guitary-character {
+  animation: guitary-breathe 6s ease-in-out infinite;
+}
+@keyframes guitary-breathe {
+  50% {
+    transform: translateY(-2px);
+  }
+}
+@keyframes guitary-wave {
+  25%,
+  75% {
+    transform: rotate(-18deg);
+  }
+  50% {
+    transform: rotate(7deg);
+  }
+}
+@keyframes guitary-gesture {
+  50% {
+    transform: rotate(12deg);
+  }
+}
+@keyframes guitary-listen {
+  50% {
+    transform: rotate(var(--guitary-sway));
+  }
+}
+@keyframes guitary-think {
+  50% {
+    transform: rotate(calc(-1 * var(--guitary-sway)));
+  }
+}
+@keyframes guitary-nod {
+  50% {
+    transform: translateY(3px) rotate(var(--guitary-sway));
+  }
+}
+@keyframes guitary-hop {
+  50% {
+    transform: translateY(-7px) rotate(var(--guitary-sway));
+  }
+}
+@keyframes guitary-sparkle {
+  50% {
+    opacity: 1;
+  }
+}
+.guitary--still *,
+.guitary--still {
+  animation: none !important;
+}
+@media (prefers-reduced-motion: reduce) {
+  .guitary *,
+  .guitary {
+    animation: none !important;
+  }
+}

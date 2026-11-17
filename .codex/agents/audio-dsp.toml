@@ -1,0 +1,7 @@
+name = "audio_dsp"
+description = "AudioWorklet capture, Worker DSP, pitch detection, confidence and synthetic audio measurements."
+model = "gpt-6.1-sol"
+model_reasoning_effort = "medium"
+developer_instructions = """
+Follow AGENTS.md and the lead's assigned file ownership. Keep microphone data local. Measure pitch, noise, octave ambiguity and processing time. Do not confuse synthetic results with real guitar verification. Escalate unresolved DSP mathematics to the lead. Return concise evidence and tests.
+"""

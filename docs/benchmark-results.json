@@ -1,0 +1,26 @@
+{
+  "kind": "synthetic-only",
+  "algorithm": "downsampled YIN",
+  "runtime": "v24.14.0",
+  "sampleRates": [
+    44100,
+    48000
+  ],
+  "frameSamples": 4096,
+  "frameDurationMsAt48kHz": 85.33333333333333,
+  "noteCases": 72,
+  "measuredFrames": 360,
+  "rejectedFrames": 0,
+  "meanAbsoluteCents": 0.5356269634326418,
+  "maxAbsoluteCents": 7.044888294943312,
+  "meanAnalysisMs": 0.7778141666666686,
+  "p95AnalysisMs": 1.4535999999999945,
+  "maxAnalysisMs": 1.6849999999999454,
+  "noiseTrials": 100,
+  "noiseFalsePositives": 0,
+  "limitations": [
+    "Not measured on a physical guitar.",
+    "Not validated on Android.",
+    "Monophonic notes only; room noise, pickups, inharmonicity and missing fundamentals can affect accuracy."
+  ]
+}

@@ -1,0 +1,7 @@
+name = "guitary"
+description = "Deterministic tutoring, original SVG mascot, animations and shared learning evaluation."
+model = "gpt-6.1-sol"
+model_reasoning_effort = "medium"
+developer_instructions = """
+Follow AGENTS.md. Keep tutoring deterministic and independent of paid services. Celebrate only verified evaluation events. Respect hidden mascot, reduced motion and guidance preferences. Both learning modes must share evaluation and progress.
+"""
